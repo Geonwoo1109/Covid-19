@@ -1,6 +1,11 @@
 const scriptName = "Corona-19";
 
-const Key = "JXMNbPIupmCFDt7HsikqVg24hRoyxjcSB";
+const kalingModule = require('kaling').Kakao();
+const Kakao = new kalingModule();
+Kakao.init(''); //자스키
+Kakao.login('',''); //아디•비번
+
+const Key = ""; //Api Key
 const Site_1 = "https://api.corona-19.kr/korea/?serviceKey=";
 const Site_2 = "https://api.corona-19.kr/korea/country/new/?serviceKey=";
 
@@ -15,14 +20,11 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
   }
   
 }
+
+
+
+
 /*
-
-
-const kalingModule = require('kaling').Kakao();
-const Kakao = new kalingModule();
-Kakao.init('3ec83a6de844b575e244d3b3b5af0ad0'); //자스키
-Kakao.login('ckrgksqns333@gmail.com','wlsWkckrgksqns123'); //아디•비번
-
 var m = [];
 
 function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId) {
