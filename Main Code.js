@@ -25,19 +25,9 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
 
 
 
-/*
-var m = [];
 
-function response(room, msg, sender, isGroupChat, replier, ImageDB, packageName, threadId) {
-
-
-if (msg.startsWith(".카링 ")) {
-  m = msg.substr(4).split("+");
-  try {
-    //replier.reply(m);
-    
 Kakao.send(room, {"link_ver" : "4.0",
-                  "template_id" : 45883,
+                  "template_id" : 00000,
                   "template_args" : {
                     a: m[0],
                     b: m[1],
@@ -46,11 +36,11 @@ Kakao.send(room, {"link_ver" : "4.0",
                  }, "custom");
 
 } catch(e) {
-  Api.reload("KakaoLink_Img");
+  Api.reload("Corona-19");
   replier.reply(e);
 }
 
 }
 } 
 
-*/
+
