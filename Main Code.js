@@ -13,8 +13,9 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
   if ((msg == ".자가진단" && sender == "방장봇") || msg == ".코로나") { //매일아침 방장봇이 명령어를 입력할 수 있도록 해주세요
     //자동으로 아침 몇시에 하는것도 있을라나?
     try {
-      var Main_Info = JSON.stringify(JSON.parse(org.jsoup.Jsoup.connect(Site_1 + Key).ignoreContentType(true).get().text()),null,4);
-      replier.reply(Main_Info);
+      var Main_Info = JSON.parse(org.jsoup.Jsoup.connect(Site_1 + Key).ignoreContentType(true).get().text());
+      replier.reply(JSON.stringify(Main_Info, null, 4));
+      replier.reply("누적 사망자 수: " + Main_Info.TotalDeath);
     } catch (e) {
       replier.reply(e+e.lineNumber);
     }
