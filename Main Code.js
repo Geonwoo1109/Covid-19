@@ -15,7 +15,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
     try {
       var Main_Info = JSON.parse(org.jsoup.Jsoup.connect(Site_1 + Key).ignoreContentType(true).get().text());
       replier.reply(JSON.stringify(Main_Info, null, 4));
-      replier.reply("누적 사망자 수: " + Main_Info.TotalDeath);
+      replier.reply("누적 사망자 수: " + Main_Info.TotalDeath
+                   +nn + ""검사자 수: " + );
     } catch (e) {
       replier.reply(e+e.lineNumber);
     }
