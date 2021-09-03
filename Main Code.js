@@ -27,7 +27,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
 
 
 
-
+//이미지 리크는?
 Kakao.sendLink(room, {"link_ver" : "4.0",
                   "template_id" : 00000,
                   "template_args" : {
