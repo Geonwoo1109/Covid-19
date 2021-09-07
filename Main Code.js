@@ -27,7 +27,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
 
 
 
-//이미지 리크는?
+
 Kakao.sendLink(room, {"link_ver" : "4.0",
                   "template_id" : 00000,
                   "template_args" : {
@@ -39,7 +39,7 @@ Kakao.sendLink(room, {"link_ver" : "4.0",
 
 } catch(e) {
   Api.reload("Corona-19");
-  replier.reply(e);
+  replier.reply("에러 내용: "+e+"");
 }
 
 }
